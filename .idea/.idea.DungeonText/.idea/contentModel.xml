@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.3.1/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Command.cs" t="Include" />
+      <e p="DungeonText.csproj" t="IncludeRecursive" />
+      <e p="DungeonText.sln" t="IncludeFlat" />
+      <e p="Helpers" t="Include">
+        <e p="Translate.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.0" t="Include">
+            <e p="DungeonText.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Objects" t="Include">
+        <e p="CommandOutput.cs" t="Include" />
+        <e p="Enums" t="Include">
+          <e p="Commands.cs" t="Include" />
+          <e p="ItemType.cs" t="Include" />
+        </e>
+        <e p="GameObjects.cs" t="Include" />
+        <e p="Items" t="Include">
+          <e p="Item.cs" t="Include" />
+          <e p="Potion.cs" t="Include" />
+          <e p="RustySword.cs" t="Include" />
+        </e>
+        <e p="Player.cs" t="Include" />
+        <e p="Rooms" t="Include">
+          <e p="Entrance.cs" t="Include" />
+          <e p="First.cs" t="Include" />
+          <e p="Room.cs" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Tests" t="Include">
+        <e p="DropItemTests.cs" t="Include" />
+        <e p="HelpTests.cs" t="Include" />
+        <e p="IntroTests.cs" t="Include" />
+        <e p="PickUpItemTests.cs" t="Include" />
+        <e p="QuitTests.cs" t="Include" />
+        <e p="SearchTests.cs" t="Include" />
+        <e p="StatusTests.cs" t="Include" />
+      </e>
+      <e p="Text" t="Include">
+        <e p="Response.cs" t="Include" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_DungeonText.799709409.00" t="ExcludeRecursive" />
+  </component>
+</project>
