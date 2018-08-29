@@ -1,4 +1,5 @@
 ﻿using DungeonText.Objects;
+using DungeonText.TestHelpers;
 using Xunit;
 
 namespace DungeonText.Tests
@@ -11,13 +12,13 @@ namespace DungeonText.Tests
             using (var gameObjects = new GameObjects())
             {
                 //prepare
-                var expectedMessage = "--\nYou feel your sanity returning to you. You quickly " +
+                var expectedMessage = "You feel your sanity returning to you. You quickly " +
                                       "find your way out of the cave and get back to your life as a farmer.";
                 
                 var commandOutput = Command.Get(gameObjects, "quit");
 
                 //assert
-                Assert.Equal(expectedMessage, commandOutput.Output);
+                Assert.Equal(expectedMessage, CleanText.Run(commandOutput.Output));
             }
         }
     }

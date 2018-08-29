@@ -1,5 +1,6 @@
 ﻿using DungeonText.Objects;
 using DungeonText.Objects.Items;
+using DungeonText.TestHelpers;
 using Xunit;
 
 namespace DungeonText.Tests
@@ -12,9 +13,9 @@ namespace DungeonText.Tests
             using (var gameObjects = new GameObjects())
             {
                 //prepare
-                var expectedMessage = "--\nYou are in the Entrance\nThis is the entrance of the cave.\n" +
+                var expectedMessage = "You are in the EntranceThis is the entrance of the cave." +
                                       "You entered from the door to the south. There is an entrance to the north" +
-                                      "\nYou have a rusty sword equipped\nYou carry in your inventory:potion";
+                                      "You have a rusty sword equippedYou carry in your inventory:potion";
                 
                 gameObjects.Player.EquipWeapon<RustySword>();
                 gameObjects.Player.PickupItem<Potion>();
@@ -23,7 +24,7 @@ namespace DungeonText.Tests
                 var commandOutput = Command.Get(gameObjects, "status");
 
                 //assert
-                Assert.Equal(expectedMessage, commandOutput.Output);
+                Assert.Equal(expectedMessage, CleanText.Run(commandOutput.Output));
             }
         }
     }
@@ -36,15 +37,15 @@ namespace DungeonText.Tests
             using (var gameObjects = new GameObjects())
             {
                 //prepare
-                var expectedMessage = "--\nYou are in the Entrance\nThis is the entrance of the cave.\n" +
+                var expectedMessage = "You are in the EntranceThis is the entrance of the cave." +
                                       "You entered from the door to the south. There is an entrance to the north" +
-                                      "\nYou have no weapon equipped\nYou have nothing in your inventory";
+                                      "You have no weapon equippedYou have nothing in your inventory";
                 
                 //execute
                 var commandOutput = Command.Get(gameObjects, "status");
 
                 //assert
-                Assert.Equal(expectedMessage, commandOutput.Output);
+                Assert.Equal(expectedMessage, CleanText.Run(commandOutput.Output));
             }
         }
     }

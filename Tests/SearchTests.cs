@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DungeonText.Objects;
 using DungeonText.Objects.Items;
+using DungeonText.TestHelpers;
 using Xunit;
 
 namespace DungeonText.Tests
@@ -34,7 +35,7 @@ namespace DungeonText.Tests
             using (var gameObjects = new GameObjects())
             {
                 //prepare
-                var expectedMessage = "--\nAfter searching the room you find:potion, rusty sword";
+                var expectedMessage = "After searching the room you find:potion, rusty sword";
 
                 gameObjects.Player.GetCurrentRoom().RemoveAllItems();
                 gameObjects.Player.GetCurrentRoom().AddItem(new Potion());
@@ -44,7 +45,7 @@ namespace DungeonText.Tests
                 var commandOutput = Command.Get(gameObjects, "search");
 
                 //assert
-                Assert.Equal(expectedMessage, commandOutput.Output);
+                Assert.Equal(expectedMessage, CleanText.Run(commandOutput.Output));
             }
         }
     }

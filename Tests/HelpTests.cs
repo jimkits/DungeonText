@@ -1,4 +1,5 @@
 ﻿using DungeonText.Objects;
+using DungeonText.TestHelpers;
 using DungeonText.Text;
 using Xunit;
 
@@ -12,13 +13,13 @@ namespace DungeonText.Tests
             using (var gameObjects = new GameObjects())
             {
                 //prepare
-                var expectedMessage = "--\nCommands: search, status, pickup <item>, drop <item>, help, quit";
+                var expectedMessage = "Commands: search, status, pickup <item>, drop <item>, help, quit";
                     
                 //execute
                 var commandOutput = Command.Get(gameObjects, "help");
 
                 //assert
-                Assert.Equal(expectedMessage, commandOutput.Output);
+                Assert.Equal(expectedMessage, CleanText.Run(commandOutput.Output));
             }
         }
     }

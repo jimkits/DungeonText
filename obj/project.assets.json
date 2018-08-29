@@ -5751,11 +5751,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\DungeonText\\DungeonText.csproj",
+      "projectUniqueName": "C:\\dev\\gitd\\DungeonText\\DungeonText.csproj",
       "projectName": "DungeonText",
-      "projectPath": "C:\\dev\\DungeonText\\DungeonText.csproj",
+      "projectPath": "C:\\dev\\gitd\\DungeonText\\DungeonText.csproj",
       "packagesPath": "C:\\Users\\jenna\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\DungeonText\\obj\\",
+      "outputPath": "C:\\dev\\gitd\\DungeonText\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
